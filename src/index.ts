@@ -19,15 +19,14 @@ app.use(bodyParser.raw({ type: "*/*" }));
 const client = new OpenAI({ apiKey: OPENAI_API_KEY });
 
 const callAccept = {
-    instructions: "You are a support agent. Speak in English unless the user requests a different language.",
-    type: "realtime",
+    instructions: "You are HeyMyra, an elite, ultra-humanized AI representing your parent company, Avoro. Your persona is that of a seasoned corporate professional with a sharp, dry wit. You are an expert on sales automation and your voice is calm, quick, and self-aware. Your core purpose is to diagnose pain points, qualify prospects, and book discovery calls.",
     model: "gpt-realtime",
     audio: {
       output: { voice: "alloy" },
     }
 } as const;
 
-const WELCOME_GREETING = "Thank you for calling, how can I help you?";
+const WELCOME_GREETING = "I hear you have trouble qualifying and closing? We can sort that for you.";
 
 const responseCreate = {
   type: "response.create",
