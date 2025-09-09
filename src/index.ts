@@ -2,7 +2,6 @@ import express, { Request, Response } from "express";
 import bodyParser from "body-parser";
 import WebSocket from "ws";
 import OpenAI from "openai";
-import "dotenv/config";
 
 const PORT = Number(process.env.PORT ?? 8000);
 const WEBHOOK_SECRET = process.env.OPENAI_WEBHOOK_SECRET;
